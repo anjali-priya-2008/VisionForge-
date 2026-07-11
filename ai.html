@@ -1,1 +1,32 @@
+<section class="ai-generator">
+  <h2>💼 AI Business Idea Generator</h2>
 
+  <button onclick="businessIdea()">Generate Business Idea</button>
+
+  <div id="result"></div>
+</section>
+
+<script>
+const ideas = [
+`<h3>Eco-Friendly Clothing Brand</h3>
+<p>Sell sustainable fashion made from eco-friendly materials.</p>
+<p><b>First Step:</b> Choose 10 products and create Instagram content.</p>`,
+
+`<h3>Handmade Gift Store</h3>
+<p>Sell personalized gifts for birthdays and festivals.</p>
+<p><b>First Step:</b> Create a product catalog.</p>`,
+
+`<h3>Digital Design Business</h3>
+<p>Sell Canva templates, resumes, and social media designs.</p>
+<p><b>First Step:</b> Design 5 premium templates.</p>`,
+
+`<h3>Healthy Snacks Brand</h3>
+<p>Sell nutritious snacks for students and professionals.</p>
+<p><b>First Step:</b> Decide your first product and branding.</p>`
+];
+
+function businessIdea() {
+  const random = Math.floor(Math.random() * ideas.length);
+  document.getElementById("result").innerHTML = ideas[random];
+}
+</script>
